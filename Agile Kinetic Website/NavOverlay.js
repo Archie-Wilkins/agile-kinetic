@@ -5,3 +5,5 @@ function Navo(){
 function Navc(){
   document.getElementById('navBar').style.width="0px"
 }
+
+// AT PAGE 920px needs to refresh
