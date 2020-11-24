@@ -1,0 +1,22 @@
+@import url("bootstrap.min.css");
+@import url("bootstrap-theme.css");
+.carousel-inner {
+  height: 300px; /* input your desired height here */
+}
+
+#appTitle {
+  text-align:center;
+}
+
+#appDesc {
+  text-align:center;
+}
+
+#appLogo {
+  height:60px;
+  width:60px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
