@@ -1,3 +1,5 @@
+/* Nav bar - Ryan Swales */
+
 #navBar{
   width: 0;
   height:100vh;
@@ -39,3 +41,26 @@
   list-style-type: none;
 
 }
+
+@media only screen and (min-width:992px){
+  #bugerBtn{
+    visibility: hidden;
+  }
+
+  #navBar {
+    width: 100vw;
+    height:8vh;
+    position: fixed;
+    background-color: gray;
+    top:0;
+  }
+}
+
+  #navBar ul {
+    display: inline;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+/* End of Nav bar - Ryan Swales */
