@@ -1,8 +1,42 @@
-#CSSNavbar{
-  height: 100%;
-  width:0;
+#navBar{
+  width: 0;
+  height:100vh;
   position: fixed;
+  background-color: gray;
   top:0;
   left:0;
-  background-color: #111 /*just a holder*/
+  padding: 30px 10px;
+  display: flex;
+}
+
+#bugerBtn{
+  position: absolute;
+  right:40px;
+  top:20px;
+}
+
+#bugerBtn:hover {
+  cursor: pointer;
+}
+
+
+#navBar li {
+    list-style-type: none;
+    margin-bottom: 12px;
+    padding: 2px;
+
+}
+
+#NavBar li:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
+
+#navBar a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  list-style-type: none;
+
 }
