@@ -1,7 +1,7 @@
 function open() {
-  document.getElementByID("CSSNavbar").style.width = "250px";
+  document.getElementByID("navBar").style.width = "200px";
 }
 
 function close() {
-  document.getElementByID("CSSNavbar").style.width = "0px";
+  document.getElementByID("navBar").style.width = "0px";
 }
