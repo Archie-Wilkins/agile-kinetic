@@ -1,6 +1,6 @@
 #navBar{
   width: 0;
-  height:100vh;
+  height:500px;
   position: fixed;
   background-color: gray;
   top:0;
@@ -29,7 +29,6 @@
 
 #NavBar li:hover{
   cursor: pointer;
-  transform: scale(1.1);
 
 }
 
