@@ -104,7 +104,10 @@ table {
 
 #NavBar li:hover{
   cursor: pointer;
+}
 
+#navLogoContainer{
+  display: none;
 }
 
 #navBar a {
@@ -126,6 +129,17 @@ table {
 @media only screen and (min-width:992px){
   #bugerBtn, #closeBtn{
     visibility: hidden;
+  }
+
+  #navLogoContainer{
+    display: inline;
+  }
+
+  #navLogo{
+    max-height: 60%;
+    width: auto;
+    position: absolute;
+    transform: translateY(-73%);
   }
 
   #navBar {
@@ -151,6 +165,7 @@ table {
     height: 100%;
   }
 
+
   #navBar li{
     box-sizing: border-box;
     margin: 0;
@@ -158,4 +173,5 @@ table {
     /* background-color: pink; --Used for testing*/
     transform: translateY(-25%);
   }
+
 }
