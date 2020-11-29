@@ -7,3 +7,5 @@ function Navc(){
 }
 
 // AT PAGE 920px needs to refresh
+// The below is a temporary fix, quite slow
+window.onresize = function(){ location.reload(); }
