@@ -1,15 +1,13 @@
 @import url("bootstrap.min.css");
 @import url("bootstrap-theme.css");
 .carousel-inner {
-  height: 300px;
+  height: 350px;
 }
 
 #appTitle {
   text-align:center;
   color: white;
 }
-
-
 /* Header */
 header{
   max-height: 85vh;
