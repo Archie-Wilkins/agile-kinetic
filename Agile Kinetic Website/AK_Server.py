@@ -90,7 +90,18 @@ def returnSecond():
 #    if request.method == 'GET':
 #        return render_template('Contact.html')
 
-#Templating route
+#Jinja template for NavBar
+@app.route("/templates/NavBar", methods=['GET'])
+def navbarTemplate():
+    if request.method == 'GET':
+        return render_template('NavBar.html')
+
+#Jinja template for footer
+@app.route("/templates/Footer", methods=['GET'])
+def footerTemplate():
+    if request.method == 'GET':
+        return render_template('Footer.html')
+
 
 
 
