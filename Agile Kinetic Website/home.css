@@ -1,15 +1,17 @@
 @import url("bootstrap.min.css");
 @import url("bootstrap-theme.css");
 .carousel-inner {
-  height: 300px; /* input your desired height here */
+  height: 300px;
 }
 
 #appTitle {
   text-align:center;
+  color: white;
 }
 
 #appDesc {
   text-align:center;
+  color: white;
 }
 
 #appLogo {
@@ -24,4 +26,16 @@
 #appPic {
   margin-left: 25%;
   float: left;
+}
+
+.social {
+  margin-left: 10%;
+  height:250px;
+  width:290px;
+  float: left;
+}
+
+.logobanner {
+  background-color: #003B66;
+  height: 150px;
 }

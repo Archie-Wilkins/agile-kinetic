@@ -1,5 +1,5 @@
 import os
-from flask import Flask,redirect,request,render_template
+from flask import Flask,redirect, request, render_template
 import sqlite3
 
 
@@ -13,7 +13,7 @@ import sqlite3
 #do uncomment them
 #There is also a piece of code below for inserting information into
 #the database, this is very much untested, but I thought it might be
-#useful later on :)  
+#useful later on :)
 
 #-Love from Archie
 #p.s any questions just let me know
