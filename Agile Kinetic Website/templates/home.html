@@ -7,73 +7,65 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
 <!-- Nav Bar -->
 <header>
 
+  <!-- Area for appstore page CTA and key points about the page -->
+    <div class ="grid-containter">
+    <div class="logobanner">
+      <img id="appLogo" src="Website assets/Logo/Mobility hub logo.svg" alt="MoHubLogo">
+      <!-- <h1 id="appTitle">Mobility Hub</h1> -->
+      <p id="appDesc">Connecting you to your recovery</p>
+      <p id="appDownloadPush">Available For Download From</p>
+      <div class="headerAppContainer">
+      <i class="fab fa-app-store"></i>
+      <i class="fab fa-google-play"></i>
+      </div>
+    </div>
+  </div>
+    <!-- <p id="appPic"><img src="mockPhone.jpg" alt="swag"></p> -->
+
+    <!-- Image links for appstore downloads-->
 </header>
 
-<!-- Area for appstore page CTA and key points about the page -->
-<section>
-  <div class ="grid-containter">
-  <div class="logobanner">
-    <img id="appLogo" src="websites assets/logo/logo mark.svg" alt="MoHubLogo">
-    <h1 id="appTitle">Mobility Hub</h1>
-    <p id="appDesc">Connecting you to your recovery</p>
-  </div>
+<div class="AppBriefInfo">
+  <h1>PUT BRIEF INFORMATION ON APP HERE</h1>
+
+
 </div>
-  <p id="appPic"><img src="mockPhone.jpg" alt="swag"></p>
-
-  <!-- Image links for appstore downloads
-  <img src="img/appstoredownload.png" alt="asdownload" class ="social">
-  <img src="img/googleplaystore.png" alt="gpdownload" class ="socialgp"> -->
-
-</section>
-
-<!-- Info about benefits to clinicians and patients -->
-<section>
-  <div class="appInfo">
-    <p>Info about app</p>
-    <p>Point 1</p>
-    <p>Point 2</p>
-    <p>Point 3</p>
-  </div>
-</section>
-
-<!-- Info about Mobiltiy Hub -->
-<section>
-  <div class="akInfo">
-    <p>Info about Mobility Hub</p>
-    <p>Point 1</p>
-    <p>Point 2</p>
-    <p>Point 3</p>
-  </div>
-</section>
 
 <!-- Carousel of partners and Certifications -->
+<!-- Caraousek taken from https://getbootstrap.com/docs/4.0/components/carousel/ -->
 <section>
-  <div id="carouselPartners" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="fuzeDoge.webp" alt="First slide">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="Website assets/Logo/Mobility hub logo.svg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="Website assets/Logo/Mobility hub logo.svg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="Website assets/Logo/Mobility hub logo.svg" alt="Third slide">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="SHIELD Badge.png" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="fuzeDoge.webp" alt="Third slide">
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselPartners" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselPartner" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 </section>
 
 

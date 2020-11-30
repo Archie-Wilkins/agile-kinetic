@@ -9,18 +9,46 @@
   color: white;
 }
 
-#appDesc {
-  text-align:center;
-  color: white;
+
+/* Header */
+header{
+  max-height: 85vh;
+  min-height: 450px;
+  width: 100%;
+  /* background-color: pink; */
+  margin-top: 35px;
 }
 
-#appLogo {
-  height:60px;
-  width:60px;
+.logobanner {
+  height:50%;
+  width:auto;
   display:block;
   margin-left: auto;
   margin-right: auto;
-  width:50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+#appDesc {
+  text-align:center;
+  color: #606060;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+#appDownloadPush{
+text-align:center;
+color: #606060;
+font-size: 26px;
+}
+
+#appLogo{
+  height: 30vh;
+  width: auto;
 }
 
 #appPic {
@@ -28,23 +56,40 @@
   float: left;
 }
 
-.social {
-  margin-left: 10%;
-  height:250px;
-  width:290px;
-  float: left;
+.logobanner i{
+  height: 20px;
+  width: auto;
+  margin: 15px 60px;
+  font-size: 40px;
 }
 
-.logobanner {
-  background-color: #003B66;
-  height: 150px;
+.logobanner i:hover{
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.appInfo {
+/* .logobanner {
   background-color: #003B66;
   height: 150px;
+} */
+
+/* End of Header */
+
+/* App Brief Info */
+.AppBriefInfo{
+  box-sizing: border-box;
+  width: 100%;
+  height: 500px;
+  background-color: pink;
+  padding: 20px;
 }
-.akInfo {
+
+.AppBriefInfo h1{
+  text-align: center;
+}
+
+/* Caraousel */
+#carouselExampleIndicators{
   background-color: #003B66;
-  height: 150px;
+  padding: 30px;
 }
