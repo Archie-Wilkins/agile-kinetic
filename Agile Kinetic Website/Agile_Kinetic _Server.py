@@ -90,6 +90,8 @@ def returnSecond():
 #    if request.method == 'GET':
 #        return render_template('Contact.html')
 
+#Templating route
+
 
 
 if __name__ == "__main__":
