@@ -1,22 +1,58 @@
 <html>
 <head>
   <title>About Us Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nav bar</title>
+  <link rel="stylesheet" href="NavBar.css">
+  <script src="NavOverlay.js"></script>
 </head>
 <link rel="stylesheet" href="aboutus.css">
-<header>
-  <div class="about-section">
-    <h1>About Us</h1>
-    <p>Text here</p>
-    <p>Text here</p>
-  </div>
-</header>
 
 <body>
-  <h2 style="text-align:center">Our Team</h2>
+  <div id="bugerBtn" onclick= "Navo()" > &#9776; </div>
+
+  <nav id="navBar">
+    <div class="NavBrand">
+      <img src="">
+      <div id="closeBtn" onclick= "Navc()" > &#10006; </div>
+    </div>
+    <ul class= "Navlinks">
+      <li id="navLogoContainer"><a href="places holder"><img id="navLogo" src="websites assets/Logo/Logo mark.png" alt=""></a></li>
+      <li><a href="places holder">Home</a></li>
+      <li><a href="places holder">Patients</a></li>
+      <li><a href="places holder">Support</a></li>
+      <li><a href="places holder">Contact</a></li>
+      <li><a href="places holder">Updates</a></li>
+      <li><a href="places holder">About</a></li>
+      <li><a href="places holder">Log in</a></li>
+    </ul>
+  </nav> <br>
+
+  <div class="about-section">
+    <h1>About Us Page</h1>
+    <p>We are an ambitious and strong establishment with intense and vital vision. We are situated in a wonderful and florishing city of Wales.</p>
+    <p>Read about the services we provide, how we work, our team, history and Social media/App.</p>
+  </div>
+
+  <div>
+    <div class="HistoryRow">
+      <div class="card1">
+        <div class="HistoryImg"><img src="../Wire Frames/About_Us_Wireframe.png" alt="ABC"></div>
+        <div class="container">
+
+      <div class="HistoryText"></div>
+
+      </div>
+  </div>
+
+
+<h2 style="text-align:center">Our Team</h2>
   <div class="row">
-    <div class="column1">
+    <div class="column">
       <div class="card">
-        <img src="" alt="ABC">
+        <img src="../Agile Kinetic Website/mobility_hub_logo.png" alt="ABC" style="width:100%">
         <div class="container">
           <h2>ABC</h2>
           <p class="title">Surgeon</p>
@@ -28,10 +64,10 @@
     </div>
 
 
-    <div class="column2">
-        <img src="" alt="123">
+    <div class="column">
+      <div class="card">
+        <img src="../Agile Kinetic Website/mobility_hub_logo.png" alt="123" style="width:100%">
         <div class="container">
-          <div class="card">
           <h2>123</h2>
           <p class="title">Physician</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -42,10 +78,10 @@
     </div>
 
 
-    <div class="column3">
-        <img src="" alt="XYZ">
+    <div class="column">
+      <div class="card">
+        <img src="../Agile Kinetic Website/mobility_hub_logo.png" alt="XYZ" style="width:100%">
         <div class="container">
-          <div class="card">
           <h2>XYZ</h2>
           <p class="title">Physician</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -55,10 +91,10 @@
         </div>
     </div>
 
-    <div class="column4">
-        <img src="" alt="000">
+    <div class="column">
+      <div class="card">
+        <img src="../Agile Kinetic Website/mobility_hub_logo.png" alt="000" style="width:100%">
         <div class="container">
-          <div class="card">
           <h2>000</h2>
           <p class="title">Physician</p>
           <p>Some text that describes me lorem ipsum ipsum lorem.</p>
