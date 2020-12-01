@@ -14,6 +14,44 @@ html {
   box-sizing: inherit;
 }
 
+.Historycolumn {
+float: left;
+width: 50%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.Historycard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  height: 336px;
+}
+
+.Whowearecolumn {
+float: left;
+width: 50%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.Whowearecard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  height: 336px;
+}
+
+.Socialmediacolumn {
+float: left;
+width: 50%;
+margin-bottom: 16px;
+padding: 0 8px;
+}
+
+.Socialmediacard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  height: 336px;
+}
 .column {
 float: left;
 width: 25%;
