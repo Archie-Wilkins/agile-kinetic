@@ -92,7 +92,7 @@ table {
   justify-content: space-between;
   flex-direction:column;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 33px;
 }
 
 
@@ -136,14 +136,25 @@ table {
 
   #navLogoContainer{
     display: inline;
+		width: 60px;
+		height: 60px;
+		z-index: 10;
+		transform: translate(-10%,-10%);
   }
 
-  #navLogo{
-    max-height: 60%;
-    width: auto;
-    position: absolute;
-    transform: translateY(-73%);
-  }
+	#navLogoContainer a{
+		height: 70%;
+		width: 70%;
+		/* transform: translateY(20%); */
+	}
+
+	#navLogoContainer a img{
+		height: 100%;
+		width: 100%;
+
+	}
+
+
 
   #navBar {
     width: 100vw;
@@ -172,7 +183,7 @@ table {
   #navBar li{
     box-sizing: border-box;
     margin: 0;
-    padding: 5px;
+    padding-top:7px;
     /* background-color: pink; --Used for testing*/
     transform: translateY(-25%);
   }
