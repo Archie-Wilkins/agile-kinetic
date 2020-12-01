@@ -77,13 +77,56 @@ font-size: 26px;
 .AppBriefInfo{
   box-sizing: border-box;
   width: 100%;
-  height: 500px;
-  background-color: pink;
-  padding: 20px;
+  height: 700px;
+  /* background-color: pink; */
+  padding: 40px 20px;
+  background-color: #f1f5f8;
 }
 
-.AppBriefInfo h1{
+/* .AppBriefInfo h1{
   text-align: center;
+} */
+
+.infoBoxContainer{
+  margin: auto;
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* flex-wrap: wrap; */
+}
+
+.info-app-box{
+  padding: 10px 5px;
+  text-align: center;
+  margin: 25px 20px;
+  height: 235px;
+  max-width: 40ch;
+  /* background-color: blue; */
+  display:inline;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Info Box Colouring  */
+.info-app-box02,.info-app-box07,.info-app-box04,.info-app-box05{
+  background-color: #FFAC00;
+}
+
+.info-app-box01,.info-app-box06,.info-app-box03,.info-app-box08{
+  background-color: #22B2B8;
+}
+
+.info-app-box i{
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.info-app-box p{
+  padding: 0 20px;
 }
 
 /* Caraousel */
