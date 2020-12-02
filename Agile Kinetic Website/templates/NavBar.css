@@ -26,6 +26,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -51,7 +52,10 @@ table {
 }
 /* End of Meyer Web Reset */
 
-
+@font-face {​​​​
+  font-family:Avenir-Book-01;
+  src: url(/Website assets/Avenir/Avenir-Book-01.ttf);
+}
 
 /* Nav bar - Ryan Swales and Archie Wilkins */
 
@@ -92,7 +96,7 @@ table {
   justify-content: space-between;
   flex-direction:column;
   width: 100%;
-  margin-top: 33px;
+	align-items: center;
 }
 
 
@@ -101,8 +105,8 @@ table {
     margin-bottom: 12px;
     padding: 2px;
     margin-left: 50%;
-    transform: translateX(-50%);
 		overflow: hidden;
+		font-family: Avenir-Book-01;
 }
 
 #NavBar li:hover{
@@ -113,11 +117,13 @@ table {
   display: none;
 }
 
-#navBar a {
+#navBar li a {
   text-decoration: none;
   color: #FFFFFF;
   display: inline-block;
   text-decoration: none;
+	font-family: Avenir-Book-01;
+
 }
 
 #navBar ul li a:hover{
@@ -134,27 +140,12 @@ table {
     visibility: hidden;
   }
 
-  #navLogoContainer{
-    display: inline;
-		width: 60px;
-		height: 60px;
-		z-index: 10;
-		transform: translate(-10%,-10%);
-  }
-
-	#navLogoContainer a{
-		height: 70%;
-		width: 70%;
-		/* transform: translateY(20%); */
-	}
-
-	#navLogoContainer a img{
-		height: 100%;
-		width: 100%;
-
-	}
-
-
+#navLogo{
+	width: 35px;
+	height: 35px;
+	object-fit: contain;
+	/* transform: translateY(-15%); */
+}
 
   #navBar {
     width: 100vw;
@@ -183,9 +174,6 @@ table {
   #navBar li{
     box-sizing: border-box;
     margin: 0;
-    padding-top:7px;
-    /* background-color: pink; --Used for testing*/
-    transform: translateY(-25%);
-  }
+	  }
 
 }
