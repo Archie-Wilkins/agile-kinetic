@@ -30,7 +30,8 @@ app = Flask(__name__)
 @app.route("/Home", methods=['POST','GET'])
 def returnFirst():
     if request.method == 'GET':
-        return render_template('home.html')
+        print("Home Page") #Just for testing
+    return render_template('home.html')
 
 #Route to About Us page
 @app.route("/AboutUs", methods=['POST','GET'])
