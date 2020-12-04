@@ -39,6 +39,12 @@ def returnSecond():
     if request.method == 'GET':
         return render_template('AboutUs.html')
 
+@app.route("/Support", methods=['POST','GET'])
+def returnSupport():
+    if request.method == 'GET':
+        print("support page") #Just for testing
+    return render_template('support.html')
+
 #Route to Support page - PLACE HOLDER
 #@app.route("/Support", methods=['GET'])
 #def returnThird():

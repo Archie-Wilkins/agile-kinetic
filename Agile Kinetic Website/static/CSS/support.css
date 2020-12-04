@@ -1,0 +1,29 @@
+.panel-body {
+  margin: auto;
+  width: 500px;
+  background-color: red;
+  text-align: center;
+}
+
+.panel-title{
+  margin: auto;
+  padding: 10px 5px;
+  text-align: center;
+  margin: 25px 20px;
+  height: 40px;
+  width: 50%;
+  font-size: 20px;
+  background-color: #FFAC00;
+  border-radius: 100px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.title {
+  text-align: center;
+}
+
+.panel-group {
+  margin: auto;
+  text-align: center;
+}
