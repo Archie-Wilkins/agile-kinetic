@@ -1,5 +1,5 @@
 import os
-from flask import Flask,redirect, request, render_template
+from flask import Flask, redirect, request, render_template, jsonify
 import sqlite3
 
 
@@ -23,6 +23,9 @@ import sqlite3
 #DATABASE = ''
 #ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 #=====================================================================
+app = Flask(__name__)
+
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 
@@ -31,7 +34,7 @@ app = Flask(__name__)
 def returnFirst():
     if request.method == 'GET':
         print("Home Page") #Just for testing
-    return render_template('home.html')
+        return render_template('homeBlock.html')
 
 #Route to About Us page
 @app.route("/AboutUs", methods=['POST','GET'])
