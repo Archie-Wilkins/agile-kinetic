@@ -3,6 +3,7 @@
 <head>
   <title> Agile Kinetic - Frequently Asked Questions</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="support.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -11,7 +12,7 @@
 
 <body>
 <!-- Nav Bar -->
-<header>
+<header class="title">
  <h2>Frequently Asked Questions</h2>
 </header>
 
@@ -19,15 +20,41 @@
 <!-- Question Section -->
 <!-- ADD BOOTSTRAP COLLASIBLE HERE -->
 <section>
-<div class = "constainer">
-  <div class="panel-group">
+  <div class="panel-group" id="accordion">
+  <div class="panel">
     <div class="panel-heading">
-      <p>Place holder text for real question
-        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
-      </p>
-
-
+      <div class="panel-title">
+        <p data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Collapsible Group 1</p>
+      </div>
+    </div>
+    <div id="collapse1" class="collapse">
+      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text </div>
+    </div>
   </div>
+  <div class="panel">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <p data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Collapsible Group 2</p>
+      </div>
+    </div>
+    <div id="collapse2" class="collapse">
+      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text.</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <p data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Collapsible Group 3</p>
+      </div>
+    </div>
+    <div id="collapse3" class="collapse">
+      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text</div>
+    </div>
+  </div>
+</div>
 
 </section>
 
