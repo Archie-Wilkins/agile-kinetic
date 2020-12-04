@@ -1,0 +1,15 @@
+.panel-body {
+  margin: auto;
+  width: 500px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.panel-title {
+  padding:2px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
