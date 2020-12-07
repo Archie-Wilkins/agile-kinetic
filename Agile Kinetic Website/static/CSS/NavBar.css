@@ -62,7 +62,7 @@ table {
 
 #navBar{
   width: 0;
-  height:100vh;
+  height:100%;
   position: fixed;
   background-color: #003B66;
   top:0;
@@ -70,6 +70,7 @@ table {
   display: flex;
   transition: 0.2s;
 	z-index: 2;
+	overflow: hidden;
 }
 
 #bugerBtn{
@@ -92,21 +93,30 @@ table {
 }
 
 #navBar ul{
-  display: flex;
-  justify-content: space-between;
+  display: fixed;
   flex-direction:column;
   width: 100%;
 	align-items: center;
+	height: 50%;
+}
+
+/* #navBar li:first-child{ */
+#navLogo{
+	visibility: hidden;
+	height: 1px;
+	width: 1px;
 }
 
 
 #navBar li {
     list-style-type: none;
-    margin-bottom: 12px;
-    padding: 2px;
-    margin-left: 50%;
+    margin-bottom: 50px;
+		margin-left: 30px;
+    padding: 0 2px;
 		overflow: hidden;
 		font-family: Avenir-Book-01;
+		text-align: center;
+
 }
 
 #NavBar li:hover{
@@ -143,6 +153,11 @@ table {
 	height: 35px;
 	object-fit: contain;
 	/* transform: translateY(-15%); */
+}
+
+.NavBrand{
+	width: 100%;
+
 }
 
   #navBar {
