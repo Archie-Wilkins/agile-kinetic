@@ -10,7 +10,7 @@
 
   <div class="updateBlog updateSection">
     <h3>Add Blog Post</h3>
-    <form action="/blog" method="post" id="updateBlogForm" name="updateBlogForm">
+    <form action="/Blog" method="post" id="updateBlogForm" name="updateBlogForm">
 
       <label for="updateTitle">Title</label><br>
       <input type="text" name="blogUpdateTitle"><br>
@@ -28,6 +28,16 @@
 
   <div class="updateFAQ updateSection">
     <h3>Add Frequently Asked Question</h3>
+    <form action="/Support" method="post" id="updateBlogForm" name="updateBlogForm">
+
+      <label for="updateTitle">Question</label><br>
+      <input type="text" name="faqQuestion"><br>
+
+      <label for="updateText">Answer</label><br>
+      <textarea name="faqAnswer" rows="8" cols="80"></textarea><br>
+
+      <button type="submit">Upload</button>
+    </form>
 </div>
 
 {%endblock%}
