@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html>
+{%extends "Base.html" %}
+
+{% block Content %}
+
+
 <head>
   <title> Agile Kinetic - Frequently Asked Questions</title>
   <!-- <link rel="stylesheet" href="style.css"> -->
@@ -10,11 +13,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
-<body>
 <!-- Nav Bar -->
-<header class="title">
+<div class="title">
  <h2>Frequently Asked Questions</h2>
-</header>
+</div>
 
 
 <!-- Question Section -->
@@ -63,15 +65,5 @@
 
 </section>
 
-<!-- Carousel of partners and Certifications -->
 
-
-
-
-
-<footer>
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: Agile Kinetic - Mobility Hub</div>
-</footer>
-
-</body>
-</html>
+{%endblock%}
