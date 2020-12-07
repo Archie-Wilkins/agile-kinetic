@@ -31,14 +31,14 @@ app = Flask(__name__)
 
 #Route to Home Page
 @app.route("/Home", methods=['POST','GET'])
-def returnFirst():
+def returnHome():
     if request.method == 'GET':
         print("Home Page") #Just for testing
         return render_template('homeBlock.html')
 
 #Route to About Us page
 @app.route("/AboutUs", methods=['POST','GET'])
-def returnSecond():
+def returnAboutUs():
     if request.method == 'GET':
         return render_template('AboutUs.html')
 
@@ -48,17 +48,12 @@ def returnSupport():
         print("support page") #Just for testing
     return render_template('support.html')
 
-#Route to Support page - PLACE HOLDER
-#@app.route("/Support", methods=['GET'])
-#def returnThird():
-#    if request.method == 'GET':
-#        return render_template('Support.html')
-
-
-#Route to Admin page - PLACE HOLDER
-#@app.route("/Admin", methods=['POST','GET'])
-#def returnFourth():
-#    if request.method == 'GET':
+#Route to Admin page 
+@app.route("/Admin", methods=['POST','GET'])
+def returnFourth():
+    if request.method == 'GET':
+        print("Admin Page Accessed")
+        return render_template('adminBlock.html')
 
     #============================================================
     #Database info insert template (UNTESTED PLACEHOLDER) - Archie
