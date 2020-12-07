@@ -11,7 +11,7 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="stylesheet" href="static/CSS/NavBar.css">
   <link rel="stylesheet" href="static/CSS/footer.css">
-  <script src="NavOverlay.js"></script>
+  <!-- <script src="NavOverlay.js"></script> Put the script in the footer -->
   <!-- <title>{{title}}</title> -->
 </head>
 <body>
@@ -52,6 +52,20 @@
 
 
   </footer>
+<script>
+function Navo(){
+  document.getElementById('navBar').style.width="200px"
+}
+
+function Navc(){
+  document.getElementById('navBar').style.width="0px"
+}
+
+// AT PAGE 920px needs to refresh
+// The below is a temporary fix, quite slow
+window.onresize = function(){ location.reload(); }
+
+</script>
 
 
 </body>
