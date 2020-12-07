@@ -12,7 +12,7 @@ body {
   background: white;
 }
 
-/* Create two unequal columns that floats next to each other */
+/* Placement of blog posts */
 .leftcolumn {
   float: left;
   width: 75%;

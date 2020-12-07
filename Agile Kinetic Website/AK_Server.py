@@ -100,7 +100,7 @@ def returnSupport():
 #    if request.method == 'GET':
 #        return render_template('Contact.html')
 
-#Route to Blog page
+#Route to Blog/Update page
 @app.route("/Blog", methods=['POST','GET'])
 def returnEitgh():
     if request.method == 'GET':
