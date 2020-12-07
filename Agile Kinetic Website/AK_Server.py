@@ -100,6 +100,12 @@ def returnSupport():
 #    if request.method == 'GET':
 #        return render_template('Contact.html')
 
+#Route to Blog/Update page
+@app.route("/Blog", methods=['POST','GET'])
+def returnEitgh():
+    if request.method == 'GET':
+        return render_template('blog.html')
+
 #Jinja template for NavBar
 @app.route("/templates/NavBar", methods=['GET'])
 def navbarTemplate():
