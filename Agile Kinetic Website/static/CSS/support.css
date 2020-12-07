@@ -1,16 +1,20 @@
 .panel-body {
-  margin: auto;
-  width: 500px;
-  background-color: red;
   text-align: center;
+  margin: 10px auto;
+  height: 100px;
+  width: 50%;
+  font-size: 20px;
+  background-color: #22B2B8;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .panel-title{
-  margin: auto;
   padding: 10px 5px;
   text-align: center;
-  margin: 25px 20px;
-  height: 40px;
+  margin: 10px auto;
+  height: 50px;
   width: 50%;
   font-size: 20px;
   background-color: #FFAC00;
@@ -22,8 +26,8 @@
 .title {
   text-align: center;
 }
-
+/*
 .panel-group {
   margin: auto;
   text-align: center;
-}
+} */
