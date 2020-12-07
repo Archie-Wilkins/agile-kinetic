@@ -97,16 +97,18 @@ table {
   flex-direction:column;
   width: 100%;
 	align-items: center;
+	height: 100%;
 }
 
 
 #navBar li {
     list-style-type: none;
     margin-bottom: 12px;
-    padding: 2px;
+    padding: 0 2px;
     margin-left: 50%;
 		overflow: hidden;
 		font-family: Avenir-Book-01;
+		overflow: hidden;
 }
 
 #NavBar li:hover{
@@ -145,6 +147,11 @@ table {
 	height: 35px;
 	object-fit: contain;
 	/* transform: translateY(-15%); */
+}
+
+.NavBrand{
+	width: 100%;
+
 }
 
   #navBar {
