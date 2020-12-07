@@ -133,8 +133,6 @@ table {
 }
 
 
-
-
 @media only screen and (min-width:992px){
   #bugerBtn, #closeBtn{
     visibility: hidden;
