@@ -95,4 +95,4 @@
     </a>
   </div>
 </section>
-{%block content %}
+{% endblock %}
