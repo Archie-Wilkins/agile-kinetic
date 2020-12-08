@@ -5,6 +5,10 @@
   color: black;
 }
 
+body {font-family: Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
 html {
   box-sizing: border-box;
 }

@@ -7,79 +7,41 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../static/CSS/contact.css">
+<div class = "body">
+  <div class="Contactpage">
+    <h1>Contact Us Page</h1>
+    <h2>How to get assistance</h2>
+    <p>For help from our team, use an online service to contact, or call.</p>
+    <p>For urgent medical help, use the NHS 111 online service, or call 111 if you are unable to get help online.</p>
+    <p>For life-threatening emergencies, call 999 for an ambulance.</p>
+  </div>
 
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+  <form class = "page_form">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Your First name..."><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Your Last name..."><br>
+    <label for="email">Email Address:</label><br>
+    <input type="text" id="email" name="email" placeholder="Your email address..."><br>
 
+    <label for="Whoyouare">Please select:</label><br>
+    <input type="radio" id="clinician" name="person" value="clinician">
+     <label for="clinician">Clinician</label><br>
+     <input type="radio" id="patient" name="person" value="patient">
+     <label for="patient">Patient</label><br>
+     <br>
+    <label for="query">Type a Query:</label>
+    <select name="query" id="query">
+      <option value="A">ABC</option>
+      <option value="B">BCD</option>
+      <option value="C">CDE</option>
+      <option value="D">DEF</option>
+    </select><br>
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+    <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write a message..." style="height:200px"></textarea>
 
-input[type=submit] {
-  background-color: #22B2B8;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #003B66;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
-</head>
-
-
-<div class="Contactpage">
-  <h1>Contact Us Page</h1>
-  <h2>How to get assistance</h2>
-  <p>For help from our team, use an online service to contact, or call.</p>
-  <p>For urgent medical help, use the NHS 111 online service, or call 111 if you are unable to get help online.</p>
-  <p>For life-threatening emergencies, call 999 for an ambulance.</p>
+   <input class="submit" type="submit" value="Submit">
+  </form>
 </div>
-
-<form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" placeholder="Your First name..."><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" placeholder="Your Last name..."><br>
-  <label for="email">Email Address:</label><br>
-  <input type="text" id="email" name="email" placeholder="Your email address..."><br>
-
-  <label for="Whoyouare">Please select:</label><br>
-  <input type="radio" id="clinician" name="person" value="clinician">
-   <label for="clinician">Clinician</label><br>
-   <input type="radio" id="patient" name="person" value="patient">
-   <label for="patient">Patient</label><br>
-   <br>
-  <label for="query">Type a Query:</label>
-  <select name="query" id="query">
-    <option value="A">ABC</option>
-    <option value="B">BCD</option>
-    <option value="C">CDE</option>
-    <option value="D">DEF</option>
-  </select><br>
-
-  <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write a message..." style="height:200px"></textarea>
-
- <input class="submit" type="submit" value="Submit">
-</form>
-
 {%endblock%}

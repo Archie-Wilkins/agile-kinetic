@@ -54,7 +54,7 @@ table {
 
 @font-face {​​​​
   font-family:AvenirBook01;
-  src: url("projectclient_y1s1_agilekinetic_1\Agile Kinetic Website\static\Website assets\Aveni\Aveni-AvenirBook01.ttf")format("ttf");
+  src: url('projectclient_y1s1_agilekinetic_1\Agile Kinetic Website\static\Website assets\Aveni\Aveni-AvenirBook01.ttf')format("truetype");
 }
 
 /* Nav bar - Ryan Swales and Archie Wilkins */
@@ -134,7 +134,7 @@ table {
   color: #FFFFFF;
   display: inline-block;
   text-decoration: none;
-	font-family: AvenirBook01;
+	font-family: helvetica;
 
 }
 
