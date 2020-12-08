@@ -1,0 +1,5 @@
+#Ignores All Database files 
+*.db
+
+#Ignores All tmp py module files
+__pycache__/
