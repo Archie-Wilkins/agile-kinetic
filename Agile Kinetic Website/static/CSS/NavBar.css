@@ -53,8 +53,8 @@ table {
 /* End of Meyer Web Reset */
 
 @font-face {​​​​
-  font-family:Avenir-Book-01;
-  src: url(/Website assets/Avenir/Avenir-Book-01.ttf);
+  font-family:AvenirBook01;
+  src: url("projectclient_y1s1_agilekinetic_1\Agile Kinetic Website\static\Website assets\Aveni\Aveni-AvenirBook01.ttf")format("ttf");
 }
 
 /* Nav bar - Ryan Swales and Archie Wilkins */
@@ -71,7 +71,8 @@ table {
   transition: 0.2s;
 	z-index: 2;
 	overflow: hidden;
-	zoom:80%
+	zoom:80%;
+	font-family: AvenirBook01;
 }
 
 #bugerBtn{
@@ -115,7 +116,7 @@ table {
 		margin-left: 30px;
     padding: 0 2px;
 		overflow: hidden;
-		font-family: Avenir-Book-01;
+		font-family: helvetica;
 		text-align: center;
 
 }
@@ -133,7 +134,7 @@ table {
   color: #FFFFFF;
   display: inline-block;
   text-decoration: none;
-	font-family: Avenir-Book-01;
+	font-family: AvenirBook01;
 
 }
 

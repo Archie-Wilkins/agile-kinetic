@@ -1,7 +1,7 @@
 .panel-body {
   text-align: center;
   margin: 10px auto;
-  height: 100px;
+  height: auto;
   width: 50%;
   font-size: 20px;
   background-color: #22B2B8;
@@ -17,8 +17,8 @@
   padding: 10px 5px;
   text-align: center;
   margin: 10px auto;
-  height: 50px;
-  width: 50%;
+  height: auto;
+  width: 60%;
   font-size: 20px;
   background-color: #FFAC00;
   border-radius: 100px;
