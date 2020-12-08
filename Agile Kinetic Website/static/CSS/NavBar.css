@@ -71,6 +71,7 @@ table {
   transition: 0.2s;
 	z-index: 2;
 	overflow: hidden;
+	zoom:80%
 }
 
 #bugerBtn{
@@ -171,6 +172,7 @@ table {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+		zoom:100%
   }
 
   #navBar ul {
