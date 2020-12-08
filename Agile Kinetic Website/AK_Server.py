@@ -80,10 +80,10 @@ def returnFourth():
 
 
 #Route to Patients page - PLACE HOLDER
-#@app.route("/PatientsInformation", methods=['GET'])
-#def returnFifth():
-#    if request.method == 'GET':
-#        return render_template('Patients.html')
+@app.route("/PatientsInformation", methods=['GET'])
+def returnFifth():
+    if request.method == 'GET':
+        return render_template('Patients.html')
 
 #Route to Log-in page - PLACE HOLDER
 #@app.route("/Admin", methods=['POST','GET'])
@@ -93,10 +93,10 @@ def returnFourth():
 
 
 #Route to Contact page - PLACE HOLDER
-#@app.route("/Admin", methods=['POST','GET'])
-#def returnSeventh():
-#    if request.method == 'GET':
-#        return render_template('Contact.html')
+@app.route("/Contact", methods=['POST','GET'])
+def returnSeventh():
+    if request.method == 'GET':
+        return render_template('Contact.html')
 
 #Route to Blog/Update page
 @app.route("/Blog", methods=['POST','GET'])
