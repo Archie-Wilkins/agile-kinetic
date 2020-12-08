@@ -43,24 +43,23 @@ def returnFourth():
     #FAQ Page Post To
     if request.method == 'POST':
         faqQuestion = request.form.get("faqQuestion", default="Error")
-	    faqAnswer = request.form.get("faqAnswer", default="Error")
-		print("inserting module" + faqAnswer)
-	    try:
-		    print('Inserting')
-			conn = sqlite3.connect(DATABASE)
-			cur = conn.cursor()      #NEED TO CHANGE PLACEHOLDER TO NAME OF DATABASE TABLE
-			cur.execute("INSERT INTO FAQ ('faqQuestion','faqAnswer')\
-			        VALUES (?,?)",(faqQuestion,faqAnswer) )
-
-			print("Still Inserting")
-			conn.commit()
-			msg =  faqQuestion + "has been added"
-		except:
-			conn.rollback()
-			msg = "error in insert, please try again"
-		finally:
-			conn.close()
-			return msg
+        faqAnswer = request.form.get("faqAnswer", default="Error")
+        print("inserting module" + faqAnswer)
+    try:
+        print('Inserting')
+        conn = sqlite3.connect(DATABASE)
+        cur = conn.cursor()      #NEED TO CHANGE PLACEHOLDER TO NAME OF DATABASE TABLE
+        cur.execute("INSERT INTO FAQ ('faqQuestion','faqAnswer')\
+		        VALUES (?,?)",(faqQuestion,faqAnswer) )
+        print("Still Inserting")
+        conn.commit()
+        msg =  faqQuestion + "has been added"
+    except:
+        conn.rollback()
+        msg = "error in insert, please try again"
+    finally:
+        conn.close()
+        return msg
 #-------------------------------------------------------------------------------
 
 
