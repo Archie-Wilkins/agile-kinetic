@@ -177,7 +177,6 @@ table {
 
   #navBar ul {
     box-sizing: border-box;
-    display: inline;
     display: flex;
     justify-content: space-around;
     flex-direction:row;

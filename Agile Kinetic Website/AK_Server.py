@@ -31,14 +31,14 @@ app = Flask(__name__)
 
 #Route to Home Page
 @app.route("/Home", methods=['POST','GET'])
-def returnFirst():
+def returnHome():
     if request.method == 'GET':
         print("Home Page") #Just for testing
         return render_template('homeBlock.html')
 
 #Route to About Us page
 @app.route("/AboutUs", methods=['POST','GET'])
-def returnSecond():
+def returnAboutUs():
     if request.method == 'GET':
         return render_template('AboutUs.html')
 
@@ -46,39 +46,37 @@ def returnSecond():
 def returnSupport():
     if request.method == 'GET':
         print("support page") #Just for testing
-    return render_template('support.html')
+        return render_template('support.html')
 
-#Route to Support page - PLACE HOLDER
-#@app.route("/Support", methods=['GET'])
-#def returnThird():
-#    if request.method == 'GET':
-#        return render_template('Support.html')
+#Route to Admin page
+@app.route("/Admin", methods=['POST','GET'])
+def returnFourth():
+    if request.method == 'GET':
+        print("Admin Page Accessed")
+        return render_template('adminBlock.html')
 
-
-#Route to Admin page - PLACE HOLDER
-#@app.route("/Admin", methods=['POST','GET'])
-#def returnFourth():
-#    if request.method == 'GET':
-
-    #============================================================
-    #Database info insert template (UNTESTED PLACEHOLDER) - Archie
-    #try:
-	#	conn = sqlite3.connect(DATABASE)
-	#	cur = conn.cursor()
-	#	cur.execute("INSERT INTO PLACEHOLDER_NAME ('placeholder_1', 'placeholder_2',
-    #                'placeholder_3', 'placeholder_4', 'placeholder_4')\
-	#				 VALUES (?,?,?,?,?)",("placeholder_1", "placeholder_2",
-    #                 "placeholder_3", "placeholder_4", "placeholder_5") )
-	#	conn.commit()
-	#	msg = "Record successfully added"
-	#except:
-	#	conn.rollback()
-	#	msg = "error in insert operation"
-	#finally:
-	#	conn.close()
-	#
-    #=============================================================
-    # return render_template('Admin.html')
+#-----------WORK IN PROGRESS----------------------------------------
+    #FAQ Page Post To
+#    if request.method == 'POST':
+#        faqQuestion = request.form.get("faqQuestion", default="Error")
+#	    faqAnswer = request.form.get("faqAnswer", default="Error")
+#		print("inserting module" + faqAnswer)
+#	    try:
+#		    print('Inserting')
+#			conn = sqlite3.connect(DATABASE)
+#			cur = conn.cursor()      #NEED TO CHANGE PLACEHOLDER TO NAME OF DATABASE TABLE
+#			cur.execute("INSERT INTO PLACEHOLDER ('faqQuestion','faqAnswer')\
+#			        VALUES (?,?)",(faqQuestion,faqAnswer) )
+#
+#			print("Still Inserting")
+#			conn.commit()
+#			msg =  faqQuestion + "has been added"
+#		except:
+#			conn.rollback()
+#			msg = "error in insert, please try again"
+#		finally:
+#			conn.close()
+#			return msg
 
 
 #Route to Patients page - PLACE HOLDER
@@ -123,3 +121,4 @@ def footerTemplate():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    #app.run(host='0.0.0.0', port=8080)

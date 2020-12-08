@@ -1,0 +1,67 @@
+{% extends "Base.html" %}
+
+{%block Content %}
+<head>
+  <link rel="stylesheet" href="static/CSS/admin.css">
+</head>
+
+<div class="admin">
+  <h2>Admin</h2>
+
+  <div class="updateBlog updateSection">
+    <h3>Add Blog Post</h3>
+    <form action="/Blog" method="post" id="updateBlogForm" name="updateBlogForm">
+
+      <label for="updateTitle">Title</label><br>
+      <input type="text" name="blogUpdateTitle"><br>
+
+      <label for="updateText">Message</label><br>
+      <textarea name="blogUpdateText" rows="8" cols="80"></textarea><br>
+
+      <label for="updateAuthor">Author</label><br>
+      <input type="text" name="blogUpdateAuthor"><br>
+
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+
+  <div class="updateFAQ updateSection">
+    <h3>Add Frequently Asked Question</h3>
+    <form action="/Support" method="post" id="updateFAQForm" name="updateBlogForm">
+
+      <label for="faqQuestion">Question</label><br>
+      <input type="text" name="faqQuestion"><br>
+
+      <label for="updateText">Answer</label><br>
+      <textarea name="faqAnswer" rows="8" cols="80"></textarea><br>
+
+      <button type="submit">Upload</button>
+    </form>
+</div>
+
+<script>
+  // FAQ Script
+  function loadName() {
+    var faqQuestion = document.forms["updateFAQForm"]["faqQuestion"].value;
+    var faqAnswer = document.forms["updateFAQForm"]["faqAnswer"].value;
+    params = 'faqQuestion='+faqQuestion+'&faqAnswer='+faqAnswer;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", '/Support', true); // true is asynchronous
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function() {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
+        console.log(xhttp.responseText);
+        document.getElementById("txt").innerHTML = xhttp.responseText;
+      } else {
+        console.error(xhttp.statusText);
+      }
+    };
+    xhttp.send(params);
+    return false;
+  }
+
+
+</script>
+
+{%endblock%}
