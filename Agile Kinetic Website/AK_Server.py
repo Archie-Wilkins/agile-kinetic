@@ -54,7 +54,7 @@ def returnFourth():
 
             ####PROBLEM IS RIGHT HERE---------------------------
             cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
-		                 VALUES (?,?)",('Question1','Answer2') )
+						VALUES (?,?)",(faqQuestion, faqAnswer) )
             #######no not down here, aboves---------------------
             print('Still Inserting')
             conn.commit()
