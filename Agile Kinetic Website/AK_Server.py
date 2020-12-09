@@ -6,6 +6,7 @@ import sqlite3
 #=====================================================================
 # Need to insert data base name below
 DATABASE = 'FAQDatabase.db'
+DATABASE2 = 'Blog.'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 #=====================================================================
 
