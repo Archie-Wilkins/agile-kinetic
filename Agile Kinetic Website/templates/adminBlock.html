@@ -28,7 +28,7 @@
 
   <div class="updateFAQ updateSection">
     <h3>Add Frequently Asked Question</h3>
-    <form action="/Support" method="post" id="updateFAQForm" name="updateBlogForm">
+    <form id="updateFAQForm" name="updateFAQForm" onsubmit="return FaqSubmit()">
 
       <label for="faqQuestion">Question</label><br>
       <input type="text" name="faqQuestion"><br>
@@ -38,16 +38,18 @@
 
       <button type="submit">Upload</button>
     </form>
+    <span id="txt"></span>
 </div>
 
 <script>
   // FAQ Script
-  function loadName() {
+  function FaqSubmit() {
+    console.log("FAQ Submit Started")
     var faqQuestion = document.forms["updateFAQForm"]["faqQuestion"].value;
     var faqAnswer = document.forms["updateFAQForm"]["faqAnswer"].value;
     params = 'faqQuestion='+faqQuestion+'&faqAnswer='+faqAnswer;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", '/Support', true); // true is asynchronous
+    xhttp.open("POST", '/Admin', true); // true is asynchronous
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onload = function() {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
@@ -60,7 +62,6 @@
     xhttp.send(params);
     return false;
   }
-
 
 </script>
 

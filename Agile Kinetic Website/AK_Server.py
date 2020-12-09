@@ -5,11 +5,10 @@ import sqlite3
 
 #=====================================================================
 # Need to insert data base name below
-DATABASE = 'FAQ.db'
+DATABASE = 'FAQDatabase.db'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 #=====================================================================
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 
@@ -42,24 +41,30 @@ def returnFourth():
 #-----------WORK IN PROGRESS----------------------------------------------------
     #FAQ Page Post To
     if request.method == 'POST':
+        print("Database Accessed")
         faqQuestion = request.form.get("faqQuestion", default="Error")
         faqAnswer = request.form.get("faqAnswer", default="Error")
-        print("inserting module" + faqAnswer)
-    try:
-        print('Inserting')
-        conn = sqlite3.connect(DATABASE)
-        cur = conn.cursor()      #NEED TO CHANGE PLACEHOLDER TO NAME OF DATABASE TABLE
-        cur.execute("INSERT INTO FAQ ('faqQuestion','faqAnswer')\
-		        VALUES (?,?)",(faqQuestion,faqAnswer) )
-        print("Still Inserting")
-        conn.commit()
-        msg =  faqQuestion + "has been added"
-    except:
-        conn.rollback()
-        msg = "error in insert, please try again"
-    finally:
-        conn.close()
-        return msg
+        print("inserting " + faqAnswer)
+        try:
+            print('Inserting')
+            conn = sqlite3.connect(DATABASE)
+            print('Connected to database')
+            cur = conn.cursor()
+            print('Conn Cursor Running')
+
+            ####PROBLEM IS RIGHT HERE---------------------------
+            cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
+		                 VALUES (?,?)",('Question1','Answer2') )
+            #######no not down here, aboves---------------------
+            print('Still Inserting')
+            conn.commit()
+            msg =  faqQuestion + "has been added"
+        except:
+            conn.rollback()
+            msg = "error in insert, please try again"
+        finally:
+            conn.close()
+            return msg
 #-------------------------------------------------------------------------------
 
 
