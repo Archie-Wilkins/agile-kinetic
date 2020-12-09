@@ -45,7 +45,7 @@ def returnFourth():
         faqQuestion = request.form.get("faqQuestion", default="Error")
         faqAnswer = request.form.get("faqAnswer", default="Error")
         print("inserting " + faqAnswer)
-        try:
+        #try:
             print('Inserting')
             conn = sqlite3.connect(DATABASE)
             print('Connected to database')
