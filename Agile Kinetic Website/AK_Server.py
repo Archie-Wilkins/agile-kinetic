@@ -46,38 +46,34 @@ def returnFourth():
         faqQuestion = request.form.get("faqQuestion", default="Error")
         faqAnswer = request.form.get("faqAnswer", default="Error")
         print("inserting " + faqAnswer)
-        #try:
-        print('Inserting')
-        conn = sqlite3.connect(DATABASE)
-        print('Connected to database')
-        cur = conn.cursor()
-        print('Conn Cursor Running')
+        try:
+            print('Inserting')
+            conn = sqlite3.connect(DATABASE)
+            print('Connected to database')
+            cur = conn.cursor()
+            print('Conn Cursor Running')
 #Work In Progress ====================================================================================
-        #cur.execute(DROP TABLE IF EXISTS FAQ
+            cur.execute("""CREATE TABLE IF NOT EXISTS "FAQ" (
+	            "ID"	INTEGER,
+	            "Question"	TEXT,
+	            "Answer"	TEXT,
+	            PRIMARY KEY("ID" AUTOINCREMENT)
+            )""")
 
-        #CREATE TABLE "FAQ" (
-	    #    "ID"	INTEGER,
-	    #    "Question"	TEXT,
-	    #    "Answer"	TEXT,
-	    #    PRIMARY KEY("ID" AUTOINCREMENT)
-        #);
-        #INSERT INTO FAQ ("Question", "Answer") VALUES ("How do I sign up for Mobility Hub?",
-        #"Get in touch with us via the contact page and we'll create login details for you");)
-
-            ####PROBLEM IS RIGHT HERE---------------------------
-        #cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
-		#				VALUES (?,?)",(faqQuestion, faqAnswer) )
-            #######no not down here, aboves---------------------
+                ####PROBLEM IS RIGHT HERE
+            cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
+		    				VALUES (?,?)",(faqQuestion, faqAnswer) )
+                #######no not down here, aboves---------------------
 #=======================================================================================================
-        print('Still Inserting')
-        conn.commit()
-        msg =  faqQuestion + "has been added"
-        #except:
-        conn.rollback()
-        msg = "error in insert, please try again"
-        #finally:
-        conn.close()
-        return msg
+            print('Still Inserting')
+            conn.commit()
+            msg =  faqQuestion + " has been added"
+        except:
+            conn.rollback()
+            msg = "error in insert, please try again"
+        finally:
+            conn.close()
+            return msg
 #-------------------------------------------------------------------------------
 
 
