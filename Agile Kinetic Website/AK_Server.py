@@ -29,7 +29,6 @@ def returnAboutUs():
 @app.route("/Support", methods=['POST','GET'])
 def returnSupport():
     if request.method == 'GET':
-        print("support page") #Just for testing
         conn = sqlite3.connect(DATABASE)
         supportCur = conn.cursor()
         supportCur.execute("SELECT Question, Answer, ID FROM FAQ")
