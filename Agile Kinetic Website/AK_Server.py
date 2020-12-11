@@ -60,10 +60,10 @@ def returnFourth():
 	            PRIMARY KEY("ID" AUTOINCREMENT)
             )""")
 
-                ####PROBLEM IS RIGHT HERE
+
             cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
 		    				VALUES (?,?)",(faqQuestion, faqAnswer) )
-                #######no not down here, aboves---------------------
+
 #=======================================================================================================
             print('Success database accessed')
             conn.commit()
