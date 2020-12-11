@@ -21,9 +21,8 @@ header{
   max-height: 85vh;
   min-height: 450px;
   width: 100%;
-  /* background-color: pink; */
   margin-top: 35px;
-  /* font-family:Avenir-01; */
+
 }
 
 .logobanner {
@@ -36,6 +35,7 @@ header{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+
 }
 
 #appDesc {
@@ -45,12 +45,16 @@ header{
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
+  font-family: helvetica;
+
 }
 
 #appDownloadPush{
 text-align:center;
 color: #606060;
 font-size: 26px;
+font-family: helvetica;
+
 }
 
 #appLogo{
