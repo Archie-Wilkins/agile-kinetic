@@ -10,7 +10,7 @@
 
   <div class="updateBlog updateSection">
     <h3>Add Blog Post</h3>
-    <form action="/Blog" method="post" id="updateBlogForm" name="updateBlogForm">
+    <form id="blogUpload" method="post" id="updateBlogForm" name="updateBlogForm">
 
       <label for="addTitle">Title</label><br>
       <input type="text" name="blogUpdateTitle"><br>
@@ -44,7 +44,7 @@
 <script>
   //Add blog script
   function BlogSubmit() {
-    console.log("Blog upload started")
+    console.log("Blog post upload started")
     var addTitle = document.forms["updateBlogForm"]["addTitle"].value;
     var addAuthor = document.forms["updateBlogForm"]["addAuthor"].value;
     var addText = document.forms["updateBlogForm"]["addText"].value;
