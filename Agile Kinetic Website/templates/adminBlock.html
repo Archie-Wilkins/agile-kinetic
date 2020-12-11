@@ -10,15 +10,15 @@
 
   <div class="updateBlog updateSection">
     <h3>Add Blog Post</h3>
-    <form id="blogUpload" method="post" id="updateBlogForm" name="updateBlogForm">
+    <form id="blogUpload" method="post" id="updateBlogForm" name="return updateBlogSubmit()">
 
-      <label for="addTitle">Title</label><br>
+      <label for="blogUpdateTitle">Title</label><br>
       <input type="text" name="blogUpdateTitle"><br>
 
-      <label for="addAuthor">Author</label><br>
+      <label for="blogUpdateAuthor">Author</label><br>
       <input type="text" name="blogUpdateAuthor"><br>
 
-      <label for="addText">Message</label><br>
+      <label for="blogUpdateText">Message</label><br>
       <textarea name="blogUpdateText" rows="8" cols="80"></textarea><br>
 
       <button type="submit">Upload</button>
@@ -43,12 +43,12 @@
 
 <script>
   //Add blog script
-  function BlogSubmit() {
+  function updateBlogSubmit() {
     console.log("Blog post upload started")
-    var addTitle = document.forms["updateBlogForm"]["addTitle"].value;
-    var addAuthor = document.forms["updateBlogForm"]["addAuthor"].value;
-    var addText = document.forms["updateBlogForm"]["addText"].value;
-    params = 'addTitle='+addTitle+'&addAuthor='+addAuthor+'&addText'+addText;
+    var addTitle = document.forms["updateBlogForm"]["blogUpdateTitle"].value;
+    var addAuthor = document.forms["updateBlogForm"]["blogUpdateAuthor"].value;
+    var addText = document.forms["updateBlogForm"]["blogUpdateText"].value;
+    params = 'blogUpdateTitle='+blogUpdateTitle+'&blogUpdateAuthor='+blogUpdateAuthor+'&blogUpdateText'+blogUpdateText;
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", '/Admin', true); // true is asynchronous
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
