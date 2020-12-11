@@ -30,7 +30,12 @@ def returnAboutUs():
 def returnSupport():
     if request.method == 'GET':
         print("support page") #Just for testing
-        return render_template('support.html')
+        conn = sqlite3.connect(DATABASE)
+        supportCur = conn.cursor()
+        supportCur.execute("SELECT Question, Answer, ID FROM FAQ")
+        supportData = supportCur.fetchall()
+
+        return render_template('support.html', data=supportData)
 
 #Route to Admin page
 @app.route("/Admin", methods=['POST','GET'])
@@ -63,6 +68,8 @@ def returnFourth():
 
             cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
 		    				VALUES (?,?)",(faqQuestion, faqAnswer) )
+
+
 
 #=======================================================================================================
             print('Success database accessed')
@@ -107,6 +114,7 @@ def returnFourth():
         finally:
             conn.close()
             return msg
+
 
 #Route to Patients page - PLACE HOLDER
 @app.route("/PatientsInformation", methods=['GET'])

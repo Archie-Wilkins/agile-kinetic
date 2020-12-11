@@ -23,39 +23,23 @@
 <!-- ADD BOOTSTRAP COLLASIBLE HERE -->
 <section class="page-size">
   <div class="panel-group" id="accordion">
-  <div class="panel">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <p data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Collapsible Group 1</p>
+
+    {%for item in data%}
+
+    <div class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <p data-toggle="collapse" data-parent="#accordion" href="#collapse{{item[2]}}">
+          {{item[0]}}</p>
+        </div>
+      </div>
+      <div id="collapse{{item[2]}}" class="collapse" >
+        <div class="panel-body">{{item[1]}} </div>
       </div>
     </div>
-    <div id="collapse1" class="collapse" >
-      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text </div>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <p data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Collapsible Group 2</p>
-      </div>
-    </div>
-    <div id="collapse2" class="collapse">
-      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text.</div>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-heading">
-      <div class="panel-title">
-        <p data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Collapsible Group 3</p>
-      </div>
-    </div>
-    <div id="collapse3" class="collapse">
-      <div class="panel-body">place holder text place holder text place holder text place holder text place holder text place holder text</div>
-    </div>
-  </div>
+
+    {% endfor %}
+
 </div>
 
 </section>
