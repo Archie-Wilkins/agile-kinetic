@@ -140,8 +140,8 @@ def returnEitgh():
         conn = sqlite3.connect(DATABASE2)
         blogCur = conn.cursor()
         blogCur.execute("SELECT Title, Author, Message FROM Blog")
-        blogData = blogCur.fetchall()
-        return render_template('blog.html', data = blogData)
+        blogUploadData = blogCur.fetchall()
+        return render_template('blog.html', data = blogUploadData)
 
 #Jinja template for NavBar
 @app.route("/templates/NavBar", methods=['GET'])
