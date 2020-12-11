@@ -47,7 +47,7 @@ def returnFourth():
         faqAnswer = request.form.get("faqAnswer", default="Error")
         print("inserting " + faqAnswer)
         try:
-            print('Inserting')
+            print('Attempting to connect to database')
             conn = sqlite3.connect(DATABASE)
             print('Connected to database')
             cur = conn.cursor()
@@ -65,7 +65,7 @@ def returnFourth():
 		    				VALUES (?,?)",(faqQuestion, faqAnswer) )
                 #######no not down here, aboves---------------------
 #=======================================================================================================
-            print('Still Inserting')
+            print('Success database accessed')
             conn.commit()
             msg =  faqQuestion + " has been added"
         except:
