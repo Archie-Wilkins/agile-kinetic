@@ -139,9 +139,9 @@ def returnSeventh():
 def returnEitgh():
     if request.method == 'GET':
         conn = sqlite3.connect(DATABASE2)
-        blogUCur = conn.cursor()
-        blogUCur.execute("SELECT Title, Author, Message FROM Blog")
-        blogData = blogUCur.fetchall()
+        blogCur = conn.cursor()
+        blogCur.execute("SELECT Title, Author, Message FROM Blog")
+        blogData = blogCur.fetchall()
         return render_template('blog.html', data = blogData)
 
 #Jinja template for NavBar
