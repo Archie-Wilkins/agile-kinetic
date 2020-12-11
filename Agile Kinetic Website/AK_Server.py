@@ -6,7 +6,7 @@ import sqlite3
 #=====================================================================
 # Need to insert data base name below
 DATABASE = 'FAQDatabase.db'
-DATABASE2 = 'Blog.db'
+DATABASE2 = 'BlogDatabase.db'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 #=====================================================================
 
@@ -44,76 +44,75 @@ def returnFourth():
         print("Admin Page Accessed")
         return render_template('adminBlock.html')
 
-#-----------WORK IN PROGRESS----------------------------------------------------
     #FAQ Page Post To
     if request.method == 'POST':
-        print("Database Accessed")
-        faqQuestion = request.form.get("faqQuestion", default="Error")
-        faqAnswer = request.form.get("faqAnswer", default="Error")
-        print("inserting " + faqAnswer)
-        try:
-            print('Attempting to connect to database')
-            conn = sqlite3.connect(DATABASE)
-            print('Connected to database')
-            cur = conn.cursor()
-            print('Conn Cursor Running')
-#Work In Progress ====================================================================================
-            cur.execute("""CREATE TABLE IF NOT EXISTS "FAQ" (
-	            "ID"	INTEGER,
-	            "Question"	TEXT,
-	            "Answer"	TEXT,
-	            PRIMARY KEY("ID" AUTOINCREMENT)
-            )""")
+        if(request.form.get("SubmitBtn") == "SubmitFAQ"):
+            print("FAQ Database Accessed")
+            faqQuestion = request.form.get("faqQuestion", default="Error")
+            faqAnswer = request.form.get("faqAnswer", default="Error")
+            print("inserting " + faqAnswer)
+            try:
+                print('Attempting to connect to database')
+                conn = sqlite3.connect(DATABASE)
+                print('Connected to database')
+                cur = conn.cursor()
+                print('Conn Cursor Running')
+
+                cur.execute("""CREATE TABLE IF NOT EXISTS "FAQ" (
+                 	            "ID"	INTEGER,
+                 	            "Question"	TEXT,
+                 	            "Answer"	TEXT,
+                 	            PRIMARY KEY("ID" AUTOINCREMENT)
+                )""")
 
 
-            cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
-		    				VALUES (?,?)",(faqQuestion, faqAnswer) )
+                cur.execute("INSERT INTO FAQ ('Question', 'Answer')\
+                     		VALUES (?,?)",(faqQuestion, faqAnswer) )
 
+                print('Success database accessed')
+                conn.commit()
+                msg =  faqQuestion + " has been added"
+            except:
+                conn.rollback()
+                msg = "error in insert, please try again"
+            finally:
+                conn.close()
+                return msg
 
+        else:
 
-#=======================================================================================================
-            print('Success database accessed')
-            conn.commit()
-            msg =  faqQuestion + " has been added"
-        except:
-            conn.rollback()
-            msg = "error in insert, please try again"
-        finally:
-            conn.close()
-            return msg
-#-------------------------------------------------------------------------------
     #Blog page post upload
-    if request.method == 'POST':
-        print("Database Accessed")
-        addTitle = request.form.get("addTitle", default="Error")
-        addAuthor = request.form.get("addAuthor", default="Error")
-        addText = request.form.get("addText", default="Error")
-        print("Uploading blog post: " + addTitle)
-        try:
-            print('Inserting')
-            conn = sqlite3.connect(DATABASE2)
-            print('Connected to database')
-            cur = conn.cursor()
-            print('Conn Cursor Running')
-            cur.execute("""CREATE TABLE IF NOT EXISTS "Blog" (
-	            "ID"	INTEGER,
-	            "Title"	TEXT,
-	            "Author"	TEXT,
-	            "Message"	TEXT,
-	            PRIMARY KEY("ID" AUTOINCREMENT)
-            )""")
+        #if request.method == 'POST':
+                print("Database Accessed")
+                addTitle = request.form.get("blogUpdateTitle", default="Error")
+                addAuthor = request.form.get("blogUpdateAuthor", default="Error")
+                addText = request.form.get("blogUpdateText", default="Error")
+                print("Uploading blog post: " + addTitle)
+                try:
+                    print('Inserting')
+                    conn = sqlite3.connect(DATABASE2)
+                    print('Connected to database')
+                    cur = conn.cursor()
+                    print('Conn Cursor Running')
+                    cur.execute("""CREATE TABLE IF NOT EXISTS "Blog" (
+	                    "ID"	INTEGER,
+	                    "Title"	TEXT,
+	                    "Author"	TEXT,
+	                    "Message"	TEXT,
+	                    PRIMARY KEY("ID" AUTOINCREMENT)
+                    )""")
 
-            cur.execute("INSERT INTO Blog ('Title', 'Author', 'Message')\
-		    				VALUES (?,?,?)",(addTitle, addAuthor, AddText) )
-            print('Still Inserting')
-            conn.commit()
-            msg =  addTitle + " has been uploaded as a post"
-        except:
-            conn.rollback()
-            msg = "Upload error, please try again"
-        finally:
-            conn.close()
-            return msg
+                    cur.execute("INSERT INTO Blog ('Title', 'Author', 'Message')\
+		            				VALUES (?,?,?)",(addTitle, addAuthor, addText) )
+                    print('Still Inserting')
+                    conn.commit()
+                    msg =  addTitle + " has been uploaded as a post"
+                except:
+                    conn.rollback()
+                    msg = "Upload error, please try again"
+                finally:
+                    conn.close()
+                    return msg
 
 
 #Route to Patients page - PLACE HOLDER

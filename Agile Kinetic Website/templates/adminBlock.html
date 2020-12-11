@@ -10,18 +10,18 @@
 
   <div class="updateBlog updateSection">
     <h3>Add Blog Post</h3>
-    <form id="blogUpload" method="post" id="updateBlogForm" name="updateBlogForm">
+    <form id="blogUpload" method="post" id="updateBlogForm" name="return updateBlogSubmit()">
 
-      <label for="addTitle">Title</label><br>
+      <label for="blogUpdateTitle">Title</label><br>
       <input type="text" name="blogUpdateTitle"><br>
 
-      <label for="addAuthor">Author</label><br>
+      <label for="blogUpdateAuthor">Author</label><br>
       <input type="text" name="blogUpdateAuthor"><br>
 
-      <label for="addText">Message</label><br>
+      <label for="blogUpdateText">Message</label><br>
       <textarea name="blogUpdateText" rows="8" cols="80"></textarea><br>
 
-      <button type="submit">Upload</button>
+      <button type="submit" name="SubmitBtn" value="SubmitBlog">Upload</button>
     </form>
   </div>
 
@@ -36,19 +36,20 @@
       <label for="updateText">Answer</label><br>
       <textarea name="faqAnswer" rows="8" cols="80"></textarea><br>
 
-      <button type="submit">Upload</button>
+      <button type="submit" name="SubmitBtn" value="SubmitFAQ">Upload</button>
     </form>
     <span id="txt"></span>
 </div>
 
 <script>
   //Add blog script
-  function BlogSubmit() {
+  function updateBlogSubmit() {
     console.log("Blog post upload started")
-    var addTitle = document.forms["updateBlogForm"]["addTitle"].value;
-    var addAuthor = document.forms["updateBlogForm"]["addAuthor"].value;
-    var addText = document.forms["updateBlogForm"]["addText"].value;
-    params = 'addTitle='+addTitle+'&addAuthor='+addAuthor+'&addText'+addText;
+    var addTitle = document.forms["updateBlogForm"]["blogUpdateTitle"].value;
+    var addAuthor = document.forms["updateBlogForm"]["blogUpdateAuthor"].value;
+    var addText = document.forms["updateBlogForm"]["blogUpdateText"].value;
+    var SubmitBtn = document.forms["updateBlogForm"]["SubmitBtn"].value;
+    params = 'blogUpdateTitle='+blogUpdateTitle+'&blogUpdateAuthor='+blogUpdateAuthor+'&blogUpdateText'+blogUpdateText+'&SubmitBtn='+SubmitBtn;
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", '/Admin', true); // true is asynchronous
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -69,7 +70,8 @@
     console.log("FAQ Submit Started")
     var faqQuestion = document.forms["updateFAQForm"]["faqQuestion"].value;
     var faqAnswer = document.forms["updateFAQForm"]["faqAnswer"].value;
-    params = 'faqQuestion='+faqQuestion+'&faqAnswer='+faqAnswer;
+    var SubmitBtn = document.forms["updateFAQForm"]["SubmitBtn"].value;
+    params = 'faqQuestion='+faqQuestion+'&faqAnswer='+faqAnswer+'&SubmitBtn='+SubmitBtn;
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", '/Admin', true); // true is asynchronous
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
