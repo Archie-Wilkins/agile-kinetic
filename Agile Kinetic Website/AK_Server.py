@@ -138,7 +138,11 @@ def returnSeventh():
 @app.route("/Blog", methods=['POST','GET'])
 def returnEitgh():
     if request.method == 'GET':
-        return render_template('blog.html')
+        conn = sqlite3.connect(DATABASE2)
+        blogCur = conn.cursor()
+        blogCur.execute("SELECT Title, Author, Message FROM Blog")
+        blogData = blogCur.fetchall()
+        return render_template('blog.html', data = blogData)
 
 #Jinja template for NavBar
 @app.route("/templates/NavBar", methods=['GET'])
