@@ -146,17 +146,21 @@ font-family: helvetica;
 
 .page-size {
   min-height: 1000px
+}
 
 /* Caraousel */
 #carouselExampleIndicators{
-  background-color: #003B66;
+  background-color: #22B2B8;
   padding: 30px;
   text-align: center;
-  min-height: 100px;
+  height: 500px;
   width: 100%;
 }
 
-#d-block_w-100 {
-  height: 100%;
-  text-align: center;
+.carousel-item img{
+  object-fit: contain;
+  height: 500px;
+  width: auto;
+  margin: auto;
+  /* transform: translateY(-20px); */
 }
