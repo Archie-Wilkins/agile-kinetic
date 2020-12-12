@@ -142,7 +142,7 @@ def returnEitgh():
         blogCur.execute("SELECT Title, Author, Message FROM Blog")
         blogUploadData = blogCur.fetchall()
         return render_template('blog.html', data = blogUploadData)
-
+        #Working
 #Jinja template for NavBar
 @app.route("/templates/NavBar", methods=['GET'])
 def navbarTemplate():
