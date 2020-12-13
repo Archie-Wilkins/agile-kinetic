@@ -150,13 +150,13 @@ font-family: helvetica;
   background-color: #22B2B8;
   padding: 30px;
   text-align: center;
-  height: 500px;
+  height: 400px;
   width: 100%;
 }
 
 .carousel-item img{
   object-fit: contain;
-  height: 500px;
+  height: 400px;
   width: auto;
   margin: auto;
   /* transform: translateY(-20px); */
