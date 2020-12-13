@@ -11,17 +11,19 @@
    <h2>Updates and News</h2>
  </div>
 
+       {%for item in data%}
  <div class="row">
    <div class="leftcolumn">
      <div class="card">
 
-       {%for item in data%}
+     <div class = "title">
+       <p>{{item[0]}}</>
+       <p>Author: {{item[1]}}<p>
+     </div>
 
-       <h2>{{item[0]}}</h2>
-       <h3>Author: {{item[1]}}</h3>
-       <h5>{{item[2]}}</h5>
-       <div class="img" style="height:200px;">Image</div>
-       <p>Some text....</p>
+    <div class="message">
+      <p>{{item[2]}}</p>
+    </div>
      </div>
    </div>
  </div>
