@@ -151,14 +151,12 @@ font-family: helvetica;
   padding-top: 30px;
   text-align: center;
   height: 460px;
-  width: 100%;
+  /* width: 90%; */
 }
 
 .carousel-item img{
   object-fit: contain;
   width: 60%;
   height: auto;
-  max-height: 100%;
-  margin: auto;
-  /* transform: translateY(-20px); */
+  max-height: 400px;
 }
