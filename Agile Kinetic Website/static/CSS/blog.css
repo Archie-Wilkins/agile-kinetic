@@ -1,11 +1,12 @@
 body {
-  font-family: Arial;
+  font-family: helvetica;
   padding: 20px;
   background: #f1f1f1;
 }
 
 /* Header/Blog Title */
 .header {
+  margin-top: 42px;
   padding: 30px;
   font-size: 40px;
   text-align: center;
@@ -14,15 +15,8 @@ body {
 
 /* Placement of blog posts */
 .leftcolumn {
-  float: left;
+  margin-left: 10%;
   width: 75%;
-}
-
-/* Blog post image */
-.img {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
 }
 
 /* Add a card effect for articles */
@@ -46,4 +40,18 @@ body {
     width: 100%;
     padding: 0;
   }
+}
+
+.title {
+  padding-bottom: :100px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 2%;
+}
+
+.message{
+  padding: 1%;
+  background-color: #22B2B8;
+  border-radius: 8px;
 }

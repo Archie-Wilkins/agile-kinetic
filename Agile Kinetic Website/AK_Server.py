@@ -29,7 +29,6 @@ def returnAboutUs():
 @app.route("/Support", methods=['POST','GET'])
 def returnSupport():
     if request.method == 'GET':
-        print("support page") #Just for testing
         conn = sqlite3.connect(DATABASE)
         supportCur = conn.cursor()
         supportCur.execute("SELECT Question, Answer, ID FROM FAQ")
@@ -138,8 +137,12 @@ def returnSeventh():
 @app.route("/Blog", methods=['POST','GET'])
 def returnEitgh():
     if request.method == 'GET':
-        return render_template('blog.html')
-
+        conn = sqlite3.connect(DATABASE2)
+        blogCur = conn.cursor()
+        blogCur.execute("SELECT Title, Author, Message FROM Blog")
+        blogUploadData = blogCur.fetchall()
+        return render_template('blog.html', data = blogUploadData)
+        #Working
 #Jinja template for NavBar
 @app.route("/templates/NavBar", methods=['GET'])
 def navbarTemplate():
