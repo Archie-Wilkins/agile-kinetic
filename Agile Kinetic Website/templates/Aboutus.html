@@ -1,8 +1,6 @@
-{% extends "Base.html" %}
-
-{%block Content %}
-
-<head>
+<html>
+#mmz
+//<head>
   <title>About Us Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +8,28 @@
   <title>Nav bar</title>
   <link rel="stylesheet" href="../static/CSS/NavBar.css">
   <script src="NavOverlay.js"></script>
-  <link rel="stylesheet" href="../static/CSS/aboutus.css">
-</head>
+//</head>
+<link rel="stylesheet" href="../static/CSS/aboutus.css">
+
+<body>
+  <div id="bugerBtn" onclick= "Navo()" > &#9776; </div>
+
+  <nav id="navBar">
+    <div class="NavBrand">
+      <img src="">
+      <div id="closeBtn" onclick= "Navc()" > &#10006; </div>
+    </div>
+    <ul class= "Navlinks">
+      <li id="navLogoContainer"><a href="places holder"><img id="navLogo" src="../static/Website assets/Logo/Logo mark.png" alt=""></a></li>
+      <li><a href="places holder">Home</a></li>
+      <li><a href="places holder">Patients</a></li>
+      <li><a href="places holder">Support</a></li>
+      <li><a href="places holder">Contact</a></li>
+      <li><a href="places holder">Updates</a></li>
+      <li><a href="places holder">About</a></li>
+      <li><a href="places holder">Log in</a></li>
+    </ul>
+  </nav> <br>
 
   <div class="about-section">
     <h1>About Us Page</h1>
@@ -135,4 +153,8 @@
   </div>
 </body>
 
-{%endblock%}
+
+<footer class="footer">
+<p> This is a footer </p>
+</footer>
+</html>
